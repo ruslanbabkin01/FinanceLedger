@@ -1,0 +1,75 @@
+.post {
+  & .container {
+    padding: 0;
+    @media screen and (min-width: $tablet) {
+      display: flex;
+    }
+  }
+
+  &-box {
+    padding: 110px 30px;
+    background-color: #0284d0;
+
+    @media screen and (max-width: 1389px) {
+      padding: 30px;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 50%;
+    }
+  }
+
+  &-date {
+    font-size: 20px;
+    line-height: 1.65;
+    margin-bottom: 5px;
+
+    color: var(--primary-white-color);
+
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+      line-height: 1.66;
+    }
+  }
+
+  &-title {
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 1.26;
+    margin-bottom: 25px;
+    margin-bottom: 25px;
+
+    color: var(--primary-white-color);
+
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+      line-height: 1.66;
+    }
+  }
+
+  &-text {
+    line-height: 1.56;
+    margin-bottom: 20px;
+
+    color: var(--primary-white-color);
+
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+      line-height: 1.62;
+      margin-bottom: 14px;
+    }
+  }
+}
+
+.button--green {
+  @extend .button;
+
+  border: 1px solid var(--primary-white-color);
+  color: var(--secondary-text-color);
+  background-color: #0284d0;
+
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
+    line-height: 1.62;
+  }
+}

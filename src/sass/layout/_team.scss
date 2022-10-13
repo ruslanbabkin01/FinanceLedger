@@ -1,0 +1,162 @@
+.team {
+  padding-top: 50px;
+  padding-bottom: 60px;
+  text-align: center;
+
+  & .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+    line-height: 1.66;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 20px;
+    }
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 1.263;
+    margin-bottom: 34px;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    line-height: 1.62;
+    margin-bottom: 37px;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 17px;
+      line-height: 1.65;
+      margin-bottom: 50px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 18px;
+      line-height: 1.55;
+    }
+  }
+}
+
+.card-list {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    margin: -10px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin: -25px;
+  }
+
+  &__item {
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      margin: 10px;
+      flex-basis: calc((100% - 10px * 2) / 3);
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin: 25px;
+      flex-basis: calc((100% - 25px * 2) / 3);
+    }
+  }
+
+  &__box {
+    padding-top: 15px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 1.26;
+    margin-bottom: 12px;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 25px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    line-height: 1.62;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 18px;
+      line-height: 1.55;
+    }
+  }
+}
+
+.card {
+  position: relative;
+
+  &:hover .overlay,
+  &:focus .overlay {
+    opacity: 1;
+  }
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+
+  box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+  );
+
+  opacity: 0;
+  cursor: pointer;
+
+  transition: opacity 250ms ease-in-out;
+}
+
+.card-actions {
+  &.card--absolut {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 25px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    @media screen and (max-width: 1389px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<section class="post" id="blog">
+  <div class="container">
+    <div class="post-box">
+      <p class="post-date">April 16 2020</p>
+      <h2 class="post-title">Blog Post One</h2>
+      <p class="post-text">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate,
+        ipsum dignissimos quae laudantium asperiores nam aliquid impedit harum
+        illum dolore explicabo ab dolores itaque rerum temporibus doloribus iste
+        maiores deleniti?
+      </p>
+
+      <button class="button button--green">Read Our Blog</button>
+    </div>
+
+    <picture>
+      <source
+        srcset="
+          ./images/posts/post-320.webp     320w,
+          ./images/posts/post-320@2x.webp  640w,
+          ./images/posts/post-384.webp     384w,
+          ./images/posts/post-384@2x.webp  768w,
+          ./images/posts/post-680.webp     680w,
+          ./images/posts/post-680@2x.webp 1360w
+        "
+        type="image/webp"
+        sizes="(min-width: 1390px) 680px, (min-width: 768px) 384px, 100vw"
+      />
+      <img
+        srcset="
+          ./images/posts/post-320.jpg     320w,
+          ./images/posts/post-320@2x.jpg  640w,
+          ./images/posts/post-384.jpg     384w,
+          ./images/posts/post-384@2x.jpg  768w,
+          ./images/posts/post-680.jpg     680w,
+          ./images/posts/post-680@2x.jpg 1360w
+        "
+        type="image/jpg"
+        sizes="(min-width: 1390px) 680px, (min-width: 768px) 384px, 100vw"
+        src="./images/posts/post-680.jpg"
+        alt="work table"
+        class="img-post"
+        width="680"
+        height="517"
+      />
+    </picture>
+  </div>
+</section>
